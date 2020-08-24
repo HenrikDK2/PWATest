@@ -31,6 +31,7 @@
     "flickity": "^2.2.1",
     "preact": "^10.4.7",
     "preact-compat": "^3.19.0",
+    "query-string": "^6.13.1",
     "react-flickity-component": "^3.5.0",
     "react-hook-form": "^6.4.1",
     "react-intersection-observer": "^8.26.2",
