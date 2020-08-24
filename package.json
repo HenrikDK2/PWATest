@@ -1,0 +1,65 @@
+{
+  "name": "preactboilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "npm run open && webpack-dev-server --config webpack.config.js --mode=development",
+    "build": "npm run remove && webpack --config webpack.config.js --mode=production",
+    "open": "start http://localhost:8080",
+    "remove": "del-cli -f dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenrikDK2/ReactBoilerPlate.git"
+  },
+  "keywords": [
+    "template, preact"
+  ],
+  "author": "Henrik Mundt Milo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenrikDK2/ReactBoilerPlate/issues"
+  },
+  "homepage": "https://github.com/HenrikDK2/ReactBoilerPlate#readme",
+  "dependencies": {
+    "@emotion/core": "^10.0.34",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "dotenv-webpack": "^2.0.0",
+    "flickity": "^2.2.1",
+    "preact": "^10.4.7",
+    "preact-compat": "^3.19.0",
+    "react-flickity-component": "^3.5.0",
+    "react-hook-form": "^6.4.1",
+    "react-intersection-observer": "^8.26.2",
+    "react-modal": "^3.11.2",
+    "react-router-dom": "^5.2.0",
+    "recoil": "0.0.10",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "del-cli": "^3.0.1",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ]
+}
