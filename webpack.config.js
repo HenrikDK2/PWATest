@@ -3,13 +3,13 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const ManifestPlugin = require("webpack-manifest-plugin");
-const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 module.exports = {
-  entry: "./src/App.jsx",
+  entry: { App: "./src/App.jsx", swWorkbox: "./src/swWorkbox.js" },
+
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "App.js",
+    filename: "[name].js",
     publicPath: "/",
   },
 
@@ -99,19 +99,6 @@ module.exports = {
     new Dotenv(),
     new ManifestPlugin({
       fileName: "manifest.webmanifest.json", // Not to confuse with manifest.json
-    }),
-    new SWPrecacheWebpackPlugin({
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: "sw.js",
-      logger(message) {
-        if (message.indexOf("Total precache size is") === 0) {
-          return;
-        }
-        console.log(message);
-      },
-      minify: true,
-      navigateFallback: "/index.html",
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, "src/index.html"),

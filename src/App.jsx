@@ -7,7 +7,7 @@ import GlobalStyle from "./GlobalStyle";
 import Modal from "react-modal";
 import { faArrowLeft, faArrowRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import registerServiceWorker from "./RegisterSW.js";
+import registerServiceWorker from "./static/RegisterSW.js";
 Modal.setAppElement("#root");
 library.add(faArrowLeft, faArrowRight, faBars, faTimes);
 
