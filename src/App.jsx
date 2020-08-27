@@ -7,23 +7,9 @@ import GlobalStyle from "./GlobalStyle";
 import Modal from "react-modal";
 import { faArrowLeft, faArrowRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import registerServiceWorker from "./RegisterSW.js";
 Modal.setAppElement("#root");
 library.add(faArrowLeft, faArrowRight, faBars, faTimes);
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/sw.js").then(
-      function (registration) {
-        // Registration was successful
-        console.log("ServiceWorker registration successful with scope: ", registration.scope);
-      },
-      function (err) {
-        // registration failed :(
-        console.log("ServiceWorker registration failed: ", err);
-      }
-    );
-  });
-}
 
 const App = () => {
   return (
@@ -38,4 +24,5 @@ const App = () => {
   );
 };
 
+registerServiceWorker();
 render(<App />, document.querySelector("#root"));

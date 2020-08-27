@@ -51,10 +51,12 @@
     "del-cli": "^3.0.1",
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
+    "sw-precache-webpack-plugin": "^1.0.0",
     "terser-webpack-plugin": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^2.2.0"
   },
   "browserslist": [
     "last 3 and_chr versions",

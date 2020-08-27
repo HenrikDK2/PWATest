@@ -2,11 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap");
-
   $black: #000;
   $white: #fff;
-  font-family: "Roboto", sans-serif;
 
   @mixin pseudo($content: "") {
     position: absolute;

@@ -135,6 +135,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: var(--primary);
+    font-family: "Roboto", sans-serif;
 
   }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Image from "../../components/Image";
+import InstallButton from "../../components/InstallButton";
 import queryString from "query-string";
 import Loader from "../../components/Loader";
 import { Link } from "react-router-dom";
@@ -67,6 +68,7 @@ const Index = () => {
         {" "}
         <Button>Go back</Button>
       </Link>
+      <InstallButton />
     </Section>
   );
 };

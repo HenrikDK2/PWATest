@@ -17,3 +17,8 @@ export const ThemeState = atom({
     themes: ["default", "fun", "cold"],
   },
 });
+
+export const PwaState = atom({
+  key: "PwaState",
+  default: null,
+});
